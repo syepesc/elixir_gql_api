@@ -1,9 +1,9 @@
 defmodule ElixirGqlApiUsingAbsintheWeb.PageController do
   use ElixirGqlApiUsingAbsintheWeb, :controller
 
-  def home(conn, _params) do
+  def blank_canvas(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :home, layout: false)
+    render(conn, :blank_canvas, layout: false)
   end
 end
