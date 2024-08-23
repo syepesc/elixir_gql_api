@@ -18,6 +18,8 @@ defmodule ElixirGqlApiUsingAbsintheWeb.Router do
     pipe_through :browser
 
     get "/blank_canvas", PageController, :blank_canvas
+
+    live "/blank_canvas_live", BlankCanvasLive
   end
 
   # Other scopes may use custom stacks.
