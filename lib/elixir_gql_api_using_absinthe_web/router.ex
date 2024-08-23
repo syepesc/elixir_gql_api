@@ -17,7 +17,7 @@ defmodule ElixirGqlApiUsingAbsintheWeb.Router do
   scope "/", ElixirGqlApiUsingAbsintheWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/blank_canvas", PageController, :blank_canvas
   end
 
   # Other scopes may use custom stacks.
