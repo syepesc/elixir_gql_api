@@ -23,9 +23,15 @@ defmodule ElixirGqlApiUsingAbsintheWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirGqlApiUsingAbsintheWeb do
-  #   pipe_through :api
-  # end
+  scope "/api" do
+    pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: ElixirGqlApiUsingAbsintheWeb.Schema,
+      interface: :simple
+
+    forward "/", Absinthe.Plug, schema: ElixirGqlApiUsingAbsintheWeb.Schema
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:elixir_gql_api_using_absinthe, :dev_routes) do

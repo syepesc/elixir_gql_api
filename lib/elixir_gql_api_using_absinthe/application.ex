@@ -10,7 +10,8 @@ defmodule ElixirGqlApiUsingAbsinthe.Application do
     children = [
       ElixirGqlApiUsingAbsintheWeb.Telemetry,
       ElixirGqlApiUsingAbsinthe.Repo,
-      {DNSCluster, query: Application.get_env(:elixir_gql_api_using_absinthe, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:elixir_gql_api_using_absinthe, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ElixirGqlApiUsingAbsinthe.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: ElixirGqlApiUsingAbsinthe.Finch},
