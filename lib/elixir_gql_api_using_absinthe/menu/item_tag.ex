@@ -7,6 +7,8 @@
 # Visit http://www.pragmaticprogrammer.com/titles/wwgraphql for more book information.
 # ---
 defmodule ElixirGqlApiUsingAbsinthe.Menu.ItemTag do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias ElixirGqlApiUsingAbsinthe.Menu.ItemTag
