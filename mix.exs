@@ -59,6 +59,8 @@ defmodule ElixirGqlApiUsingAbsinthe.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
+      {:absinthe, "~> 1.7"},
+      {:absinthe_plug, "~> 1.5"},
 
       # dev
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}

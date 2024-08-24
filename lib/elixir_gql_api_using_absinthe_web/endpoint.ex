@@ -41,8 +41,10 @@ defmodule ElixirGqlApiUsingAbsintheWeb.Endpoint do
   plug Plug.RequestId
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
+  # The reason we use Absinthe.Plug.Parser here is to accept different content types
+  # Check https://hexdocs.pm/absinthe/plug-phoenix.html#plug
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :multipart, :json, Absinthe.Plug.Parser],
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
 
