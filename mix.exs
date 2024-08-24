@@ -58,7 +58,10 @@ defmodule ElixirGqlApiUsingAbsinthe.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+
+      # dev
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -75,7 +78,10 @@ defmodule ElixirGqlApiUsingAbsinthe.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind elixir_gql_api_using_absinthe", "esbuild elixir_gql_api_using_absinthe"],
+      "assets.build": [
+        "tailwind elixir_gql_api_using_absinthe",
+        "esbuild elixir_gql_api_using_absinthe"
+      ],
       "assets.deploy": [
         "tailwind elixir_gql_api_using_absinthe --minify",
         "esbuild elixir_gql_api_using_absinthe --minify",
