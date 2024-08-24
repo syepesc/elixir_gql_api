@@ -1,4 +1,4 @@
-defmodule ElixirGqlApiUsingAbsintheWeb.ConnCase do
+defmodule ElixirGqlApiWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule ElixirGqlApiUsingAbsintheWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ElixirGqlApiUsingAbsintheWeb.ConnCase, async: true`, although
+  by setting `use ElixirGqlApiWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,19 +20,19 @@ defmodule ElixirGqlApiUsingAbsintheWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint ElixirGqlApiUsingAbsintheWeb.Endpoint
+      @endpoint ElixirGqlApiWeb.Endpoint
 
-      use ElixirGqlApiUsingAbsintheWeb, :verified_routes
+      use ElixirGqlApiWeb, :verified_routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ElixirGqlApiUsingAbsintheWeb.ConnCase
+      import ElixirGqlApiWeb.ConnCase
     end
   end
 
   setup tags do
-    ElixirGqlApiUsingAbsinthe.DataCase.setup_sandbox(tags)
+    ElixirGqlApi.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

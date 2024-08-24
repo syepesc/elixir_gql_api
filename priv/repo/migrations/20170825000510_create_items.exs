@@ -6,7 +6,7 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/wwgraphql for more book information.
 # ---
-defmodule ElixirGqlApiUsingAbsinthe.Repo.Migrations.CreateItems do
+defmodule ElixirGqlApi.Repo.Migrations.CreateItems do
   use Ecto.Migration
 
   def change do

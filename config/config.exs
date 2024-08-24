@@ -7,22 +7,22 @@
 # General application configuration
 import Config
 
-config :elixir_gql_api_using_absinthe,
-  ecto_repos: [ElixirGqlApiUsingAbsinthe.Repo],
+config :elixir_gql_api,
+  ecto_repos: [ElixirGqlApi.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :elixir_gql_api_using_absinthe, ElixirGqlApiUsingAbsintheWeb.Endpoint,
+config :elixir_gql_api, ElixirGqlApiWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [
-      html: ElixirGqlApiUsingAbsintheWeb.ErrorHTML,
-      json: ElixirGqlApiUsingAbsintheWeb.ErrorJSON
+      html: ElixirGqlApiWeb.ErrorHTML,
+      json: ElixirGqlApiWeb.ErrorJSON
     ],
     layout: false
   ],
-  pubsub_server: ElixirGqlApiUsingAbsinthe.PubSub,
+  pubsub_server: ElixirGqlApi.PubSub,
   live_view: [signing_salt: "d/auIxuw"]
 
 # Configures the mailer
@@ -32,13 +32,13 @@ config :elixir_gql_api_using_absinthe, ElixirGqlApiUsingAbsintheWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :elixir_gql_api_using_absinthe, ElixirGqlApiUsingAbsinthe.Mailer,
+config :elixir_gql_api, ElixirGqlApi.Mailer,
   adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
-  elixir_gql_api_using_absinthe: [
+  elixir_gql_api: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
@@ -48,7 +48,7 @@ config :esbuild,
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "3.4.3",
-  elixir_gql_api_using_absinthe: [
+  elixir_gql_api: [
     args: ~w(
       --config=tailwind.config.js
       --input=css/app.css

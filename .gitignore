@@ -23,7 +23,7 @@ erl_crash.dump
 /tmp/
 
 # Ignore package tarball (built via "mix hex.build").
-elixir_gql_api_using_absinthe-*.tar
+elixir_gql_api-*.tar
 
 # Ignore assets that are produced by build tools.
 /priv/static/assets/
