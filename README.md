@@ -1,18 +1,53 @@
-# ElixirGqlApiUsingAbsinthe
+# Elixir GQL API Using Absinthe
 
-To start your Phoenix server:
+This project was built following the book **Craft GraphQL APIs in Elixir with Absinthe** to better my understanding of building APIs with GraphQL using Elixir Absinthe and Phoenix-LiveView.
 
-- Run `mix setup` to install and setup dependencies
-- Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+The project also include some personal additions like LiveView, UI, and more.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+> Excerpted from "Craft GraphQL APIs in Elixir with Absinthe" published by The Pragmatic Bookshelf. Copyrights apply to this code. It may not be used to create training material, courses, books, articles, and the like. Contact us if you are in doubt. We make no guarantees that this code is fit for any purpose. Visit [pragmaticprogrammer wwgraphql](http://www.pragmaticprogrammer.com/titles/wwgraphql) for more book information.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## How to run the project?
 
-## Learn more
+- Install [mise](https://mise.jdx.dev/getting-started.html) (previously `rtx`) , `cd` into the project directory and run:
 
-- Official website: https://www.phoenixframework.org/
-- Guides: https://hexdocs.pm/phoenix/overview.html
-- Docs: https://hexdocs.pm/phoenix
-- Forum: https://elixirforum.com/c/phoenix-forum
-- Source: https://github.com/phoenixframework/phoenix
+```bash
+mise install
+```
+
+- `cd` into the project directory and run the following to install and setup dependencies:
+
+```bash
+mix setup
+```
+
+- Start Phoenix endpoint with
+
+```bash
+mix phx.server
+```
+
+OR inside IEx with
+
+```bash
+iex -S mix phx.server
+```
+
+> Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+## How to run the tests of the project?
+
+### Unit tests
+
+- `cd` into the project directory and run:
+
+```bash
+mix test
+```
+
+### Integration tests
+
+WIP.
+
+### Smoke tests
+
+WIP.
