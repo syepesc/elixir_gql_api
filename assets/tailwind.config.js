@@ -8,8 +8,8 @@ const path = require("path")
 module.exports = {
   content: [
     "./js/**/*.js",
-    "../lib/elixir_gql_api_using_absinthe_web.ex",
-    "../lib/elixir_gql_api_using_absinthe_web/**/*.*ex"
+    "../lib/elixir_gql_api_web.ex",
+    "../lib/elixir_gql_api_web/**/*.*ex"
   ],
   theme: {
     extend: {

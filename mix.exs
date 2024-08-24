@@ -1,9 +1,9 @@
-defmodule ElixirGqlApiUsingAbsinthe.MixProject do
+defmodule ElixirGqlApi.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_gql_api_using_absinthe,
+      app: :elixir_gql_api,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule ElixirGqlApiUsingAbsinthe.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ElixirGqlApiUsingAbsinthe.Application, []},
+      mod: {ElixirGqlApi.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -81,12 +81,12 @@ defmodule ElixirGqlApiUsingAbsinthe.MixProject do
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": [
-        "tailwind elixir_gql_api_using_absinthe",
-        "esbuild elixir_gql_api_using_absinthe"
+        "tailwind elixir_gql_api",
+        "esbuild elixir_gql_api"
       ],
       "assets.deploy": [
-        "tailwind elixir_gql_api_using_absinthe --minify",
-        "esbuild elixir_gql_api_using_absinthe --minify",
+        "tailwind elixir_gql_api --minify",
+        "esbuild elixir_gql_api --minify",
         "phx.digest"
       ]
     ]

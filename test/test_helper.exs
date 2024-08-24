@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(ElixirGqlApiUsingAbsinthe.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(ElixirGqlApi.Repo, :manual)
