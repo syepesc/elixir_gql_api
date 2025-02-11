@@ -1,3 +1,9 @@
+[WIP]
+- No UI build yet.
+- API is working in the backend, see: localhost:4000/graphiql.
+- Some Graphql queries implemented.
+- No mutations implemented yet.
+
 # Elixir GQL API Using Absinthe
 
 This project was built following the book **Craft GraphQL APIs in Elixir with Absinthe** to better my understanding of building APIs with GraphQL using Elixir Absinthe and Phoenix-LiveView.
