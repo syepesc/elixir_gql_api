@@ -1,4 +1,4 @@
-[WIP]
+**[WIP]**
 - No UI build yet.
 - API is working in the backend, see: localhost:4000/graphiql.
 - Some Graphql queries implemented.
